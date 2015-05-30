@@ -13,7 +13,7 @@ class MasterViewController: UITableViewController {
   // MARK: - Table View
 
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
+    return tableView.tag == 0 ? 1 : 2
   }
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
