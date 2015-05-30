@@ -1,3 +1,11 @@
+I think I know the answer. Basically, I knew it wasn't a super smart idea to have a TableView inside another one, the first one being Static the other one Dynamic (which I should have stated).
+
+Then I remembered as soon as you implement any of the delegates (e.g. `cellForRow`) you'll need to implement them all...
+
+To sumarize, what I wanted to do can be done with only 1 TableView and using the `TableViewHeader`, which is what I'll do and what people should do, if they start seeing those weird messages coming.
+
+————————
+
 I'm having a `UITableViewController` which has a `TableView` in which I have a Cell which has another `TableView` in it. 
 
 When that internal `TableView` tries `dequeueReusableCellWithIdentifier` for indexPath `(1,0)` the app crashes with
